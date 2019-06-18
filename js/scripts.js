@@ -1,15 +1,9 @@
 var repository = [
-    {name: 'Rick Sanchez', age: 70, job: ['scientist', ' inventor']},
-    {name: 'Morty Smith', age: 14, job: ['student at Harry Herpson High School', ' Rick\u0027s helping hand']},
-    {name: 'Jerry Smith', age: 35, job: ['advertising agent (fired)', ' unknown assigned Galactic Federation employment (laid off after Federation collapse)', ' unemployed']}
+    {name: 'Cubone', height: 0.4, abilities: ['Battle-armor, Lightningrod, Rock-head']},
+    {name: 'Psyduck', height: 0.8, abilities: ['Damp, Cloud-nine, Swift-swim']},
+    {name: 'Pikachu', height: 0.4, abilities: ['Static, Lightningrod']}
 ];
 
 for (var i = 0; i < repository.length; i++) {
-    if (repository[i].age == 70) {
-        document.write('<p>' + repository[i].name + ' (age: ' + repository[i].age + ') ' + repository[i].job + ' &#x2012Wow! Old, but cool!');
-    } else {
-        document.write('<p>' + repository[i].name + ' (age: ' + repository[i].age + ') ' + repository[i].job);
-
-    }
+    document.write('<p>' + '<strong>' + repository[i].name + '</strong>' + ' -' + ' Height in meters: ' + repository[i].height + ' - Abilities: ' + repository[i].abilities);
 }
-
