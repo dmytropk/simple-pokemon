@@ -1,18 +1,28 @@
-var repository = [
+var pokemonRepository = (function () {
+    var repository = [
     {name: 'Cubone', height: 0.4, abilities: ['Battle-armor, Lightningrod, Rock-head']},
     {name: 'Psyduck', height: 0.8, abilities: ['Damp, Cloud-nine, Swift-swim']},
     {name: 'Pikachu', height: 0.4, abilities: ['Static, Lightningrod']}
-];
+    ];
 
-// for (var i = 0; i < repository.length; i++) {
-//     document.write('<p>' + '<strong>' + repository[i].name + '</strong>' + ' -' + ' Height in meters: ' + repository[i].height + ' - Abilities: ' + repository[i].abilities);
-// }
+    function add(pokemon) {
+        repository.push(pokemon);
+    }
+    
+    function getAll() {
+        return repository;
+    }
+    
+    return {
+        add: add,
+        getAll: getAll
+    };
+})();
 
-// Object.keys(repository).forEach(function(property) {
-//     document.write('<p>' + '<strong>' + repository[property].name + '</strong>' + ' -' + ' Height in meters: ' + repository[property].height + ' - Abilities: ' + repository[property].abilities);
-// });
+var getAllPokemons = pokemonRepository.getAll();    /* Catch them all! */
 
-Object.keys(repository).forEach(function(property) {
-    var pokeMon = repository[property];
+Object.keys(getAllPokemons).forEach(function(property) {
+    var pokeMon = getAllPokemons[property];
     document.write('<p>' + '<strong>' + pokeMon.name + '</strong>' + ' -' + ' Height in meters: ' + pokeMon.height + ' - Abilities: ' + pokeMon.abilities);
 });
+    
