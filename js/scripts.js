@@ -21,8 +21,8 @@ var pokemonRepository = (function () {
 
 var getAllPokemons = pokemonRepository.getAll();    /* Catch them all! */
 
-Object.keys(getAllPokemons).forEach(function(property) {
-    var pokeMon = getAllPokemons[property];
-    document.write('<p>' + '<strong>' + pokeMon.name + '</strong>' + ' -' + ' Height in meters: ' + pokeMon.height + ' - Abilities: ' + pokeMon.abilities);
+getAllPokemons.forEach(function(property) {
+    document.write('<p>' + '<strong>' + property.name + '</strong>' + ' -' + ' Height in meters: ' + property.height + ' - Abilities: ' + property.abilities);
 });
+
     
